@@ -1,4 +1,4 @@
-const input = `1899
+1899
 1358
 1824
 1541
@@ -197,16 +197,4 @@ const input = `1899
 1023
 1758
 1857
-1723`;
-
-const values = input.split('\n').map(val => Number(val));
-
-for (let i = 0; i < values.length; i++) {
-    for (let j = i + 1; j < values.length; j++) {
-        for (let k = j + 1; k < values.length; k++) {
-            if (values[i] + values[j] + values[k] === 2020) {
-                console.log(values[i] * values[j] * values[k]);
-            }
-        }
-    }
-}
+1723
