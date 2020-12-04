@@ -7,25 +7,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 110.0
-margin_bottom = 14.0
-
-[node name="Label" type="Label" parent="CenterContainer"]
-margin_left = 33.0
-margin_right = 77.0
-margin_bottom = 14.0
-text = "Day 01"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
-margin_top = 18.0
 margin_right = 110.0
-margin_bottom = 38.0
+margin_bottom = 20.0
 
 [node name="Part1" type="Button" parent="HSplitContainer"]
 margin_right = 49.0

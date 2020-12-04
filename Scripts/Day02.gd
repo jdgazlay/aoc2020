@@ -1,23 +1,22 @@
-extends VBoxContainer
+extends DailyChallenge
 
-var input_data = []
 
-func _ready():
-	var file: = File.new()
-	file.open("res://Resources/day02_input.tres", File.READ)
-	var content = file.get_as_text()
-	# content = "4-7 k: kfkgkkkkk"
-	for password in content.split('\n'):
+func get_input_data() -> Array:
+	var input_data: = .get_input_data()
+
+	var input_return: = []
+
+	for password in input_data:
 		var password_data = password.split(":")
 		if len(password_data) >= 2:
-			input_data.append({"policy": password_data[0], "password": password_data[1].strip_edges()})
-	file.close()
+			input_return.append({"policy": password_data[0], "password": password_data[1].strip_edges()})
 
-	$HSplitContainer/Part1.connect("pressed", self, "_on_Part1_pressed")
-	$HSplitContainer/Part2.connect("pressed", self, "_on_Part2_pressed")
+	return input_return
 
 
 func _on_Part1_pressed():
+	var input_data: = get_input_data()
+
 	var valid_count = 0
 
 	for password in input_data:
@@ -34,6 +33,8 @@ func _on_Part1_pressed():
 
 
 func _on_Part2_pressed():
+	var input_data: = get_input_data()
+
 	var valid_count = 0
 
 	for password in input_data:
@@ -47,6 +48,6 @@ func _on_Part2_pressed():
 
 		if (match_one and !match_two) or (!match_one and match_two):
 			valid_count += 1
-			
+
 
 	print(valid_count)
