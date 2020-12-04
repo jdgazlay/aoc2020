@@ -61,3 +61,20 @@ margin_bottom = 38.0
 script = ExtResource( 3 )
 input_path = "res://Resources/day02_input.tres"
 
+[node name="Day03" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+margin_left = 250.0
+margin_right = 360.0
+margin_bottom = 38.0
+
+[node name="Label2" type="Label" parent="CenterContainer/HBoxContainer2/Day03"]
+margin_right = 110.0
+margin_bottom = 14.0
+text = "Day 3"
+align = 1
+valign = 1
+
+[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day03" instance=ExtResource( 2 )]
+margin_top = 18.0
+margin_bottom = 38.0
+script = ExtResource( 4 )
+input_path = "res://Resources/day03_input.tres"
