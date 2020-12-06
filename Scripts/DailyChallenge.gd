@@ -4,15 +4,20 @@ class_name DailyChallenge
 
 export(String, FILE) var input_path
 
-func get_input_data() -> Array:
+func get_raw_input() -> String:
 	var file: = File.new()
 	file.open(input_path, File.READ)
 	var content = file.get_as_text()
-	var input = []
-	for item in content.split('\n'):
-		input.append(item)
-
 	file.close()
+
+	return content
+
+func get_input_data() -> Array:
+	var raw_data = get_raw_input()
+
+	var input = []
+	for item in raw_data.split('\n'):
+		input.append(item)
 
 	return input
 

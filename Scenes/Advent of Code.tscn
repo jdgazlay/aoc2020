@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Day01.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Daily Challenge.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Day02.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Day03.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Day04.gd" type="Script" id=5]
 
 [node name="Advent of Code" type="Node2D"]
 
@@ -17,9 +18,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer"]
-margin_left = 332.0
+margin_left = 269.0
 margin_top = 281.0
-margin_right = 692.0
+margin_right = 754.0
 margin_bottom = 319.0
 custom_constants/separation = 15
 __meta__ = {
@@ -30,7 +31,7 @@ __meta__ = {
 margin_right = 110.0
 margin_bottom = 38.0
 
-[node name="Label1" type="Label" parent="CenterContainer/HBoxContainer2/Day01"]
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day01"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 1"
@@ -48,7 +49,7 @@ margin_left = 125.0
 margin_right = 235.0
 margin_bottom = 38.0
 
-[node name="Label2" type="Label" parent="CenterContainer/HBoxContainer2/Day02"]
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day02"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 2"
@@ -66,7 +67,7 @@ margin_left = 250.0
 margin_right = 360.0
 margin_bottom = 38.0
 
-[node name="Label2" type="Label" parent="CenterContainer/HBoxContainer2/Day03"]
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day03"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 3"
@@ -78,3 +79,21 @@ margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 4 )
 input_path = "res://Resources/day03_input.tres"
+
+[node name="Day04" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+margin_left = 375.0
+margin_right = 485.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day04"]
+margin_right = 110.0
+margin_bottom = 14.0
+text = "Day 4"
+align = 1
+valign = 1
+
+[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day04" instance=ExtResource( 2 )]
+margin_top = 18.0
+margin_bottom = 38.0
+script = ExtResource( 5 )
+input_path = "res://Resources/day04_input.tres"
