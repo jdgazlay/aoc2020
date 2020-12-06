@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Day01.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Daily Challenge.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Day02.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Day03.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Day04.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Day05.gd" type="Script" id=6]
 
 [node name="Advent of Code" type="Node2D"]
 
@@ -18,9 +19,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer"]
-margin_left = 269.0
+margin_left = 207.0
 margin_top = 281.0
-margin_right = 754.0
+margin_right = 817.0
 margin_bottom = 319.0
 custom_constants/separation = 15
 __meta__ = {
@@ -97,3 +98,21 @@ margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 5 )
 input_path = "res://Resources/day04_input.tres"
+
+[node name="Day05" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+margin_left = 500.0
+margin_right = 610.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day05"]
+margin_right = 110.0
+margin_bottom = 14.0
+text = "Day 5"
+align = 1
+valign = 1
+
+[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day05" instance=ExtResource( 2 )]
+margin_top = 18.0
+margin_bottom = 38.0
+script = ExtResource( 6 )
+input_path = "res://Resources/day05_input.tres"
