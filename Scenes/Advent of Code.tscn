@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Day01.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Daily Challenge.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scripts/Day03.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Day04.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Day05.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Day06.gd" type="Script" id=7]
 
 [node name="Advent of Code" type="Node2D"]
 
@@ -18,101 +19,128 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 207.0
-margin_top = 281.0
+margin_top = 255.0
 margin_right = 817.0
-margin_bottom = 319.0
+margin_bottom = 344.0
+custom_constants/separation = 13
+
+[node name="First 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 610.0
+margin_bottom = 38.0
 custom_constants/separation = 15
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Day01" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+[node name="Day01" type="VBoxContainer" parent="CenterContainer/VBoxContainer/First 5"]
 margin_right = 110.0
 margin_bottom = 38.0
 
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day01"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/First 5/Day01"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 1"
 align = 1
 valign = 1
 
-[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day01" instance=ExtResource( 2 )]
+[node name="Daily Challenge" parent="CenterContainer/VBoxContainer/First 5/Day01" instance=ExtResource( 2 )]
 margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 1 )
 input_path = "res://Resources/day01_input.tres"
 
-[node name="Day02" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+[node name="Day02" type="VBoxContainer" parent="CenterContainer/VBoxContainer/First 5"]
 margin_left = 125.0
 margin_right = 235.0
 margin_bottom = 38.0
 
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day02"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/First 5/Day02"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 2"
 align = 1
 valign = 1
 
-[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day02" instance=ExtResource( 2 )]
+[node name="Daily Challenge" parent="CenterContainer/VBoxContainer/First 5/Day02" instance=ExtResource( 2 )]
 margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 3 )
 input_path = "res://Resources/day02_input.tres"
 
-[node name="Day03" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+[node name="Day03" type="VBoxContainer" parent="CenterContainer/VBoxContainer/First 5"]
 margin_left = 250.0
 margin_right = 360.0
 margin_bottom = 38.0
 
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day03"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/First 5/Day03"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 3"
 align = 1
 valign = 1
 
-[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day03" instance=ExtResource( 2 )]
+[node name="Daily Challenge" parent="CenterContainer/VBoxContainer/First 5/Day03" instance=ExtResource( 2 )]
 margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 4 )
 input_path = "res://Resources/day03_input.tres"
 
-[node name="Day04" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+[node name="Day04" type="VBoxContainer" parent="CenterContainer/VBoxContainer/First 5"]
 margin_left = 375.0
 margin_right = 485.0
 margin_bottom = 38.0
 
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day04"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/First 5/Day04"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 4"
 align = 1
 valign = 1
 
-[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day04" instance=ExtResource( 2 )]
+[node name="Daily Challenge" parent="CenterContainer/VBoxContainer/First 5/Day04" instance=ExtResource( 2 )]
 margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 5 )
 input_path = "res://Resources/day04_input.tres"
 
-[node name="Day05" type="VBoxContainer" parent="CenterContainer/HBoxContainer2"]
+[node name="Day05" type="VBoxContainer" parent="CenterContainer/VBoxContainer/First 5"]
 margin_left = 500.0
 margin_right = 610.0
 margin_bottom = 38.0
 
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer2/Day05"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/First 5/Day05"]
 margin_right = 110.0
 margin_bottom = 14.0
 text = "Day 5"
 align = 1
 valign = 1
 
-[node name="Daily Challenge" parent="CenterContainer/HBoxContainer2/Day05" instance=ExtResource( 2 )]
+[node name="Daily Challenge" parent="CenterContainer/VBoxContainer/First 5/Day05" instance=ExtResource( 2 )]
 margin_top = 18.0
 margin_bottom = 38.0
 script = ExtResource( 6 )
 input_path = "res://Resources/day05_input.tres"
+
+[node name="Second 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 51.0
+margin_right = 610.0
+margin_bottom = 89.0
+
+[node name="Day06" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Second 5"]
+margin_right = 110.0
+margin_bottom = 38.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Second 5/Day06"]
+margin_right = 110.0
+margin_bottom = 14.0
+text = "Day 6"
+align = 1
+valign = 1
+
+[node name="Daily Challenge" parent="CenterContainer/VBoxContainer/Second 5/Day06" instance=ExtResource( 2 )]
+margin_top = 18.0
+margin_bottom = 38.0
+script = ExtResource( 7 )
+input_path = "res://Resources/day06_input.tres"
