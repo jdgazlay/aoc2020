@@ -2,7 +2,7 @@
 
 [node name="Daily Challenge" type="VBoxContainer"]
 margin_right = 110.0
-margin_bottom = 40.0
+margin_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

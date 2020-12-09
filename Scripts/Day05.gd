@@ -45,6 +45,6 @@ func _on_Part2_pressed():
 
 	for index in range(len(seat_ids) - 1):
 		if seat_ids[index + 1] - seat_ids[index] == 2:
-			print('caught')
+
 			my_seat = seat_ids[index] + 1
 	print(my_seat)
