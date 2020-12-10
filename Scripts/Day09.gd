@@ -40,6 +40,36 @@ func _on_Part1_pressed():
 			index += 1
 
 	print(data_sequence[index])
+	return data_sequence[index]
+
+
+func sum(addends):
+	var sum = 0
+	for num in addends:
+		sum += num
+	return sum
+
+
+func _on_Part2_pressed():
+	var data_sequence = get_input_data()
+	var sum_check = _on_Part1_pressed()
+	var addends = []
+	var index = 0
+
+	while index in range(len(data_sequence)):
+		var addend_sum = sum(addends)
+
+		if addend_sum < sum_check:
+			addends.push_back(data_sequence[index])
+			index += 1
+		elif addend_sum > sum_check:
+			addends.pop_front()
+		elif addend_sum == sum_check:
+			break
+
+	addends.sort()
+	print(addends[0] + addends[len(addends) - 1])
+
 
 
 
